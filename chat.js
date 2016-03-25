@@ -59,6 +59,14 @@ io.on('connection', function (socket) {
             io.sockets.emit('chat.message', JSON.stringify(message));
         });
 
+        socket.on('privatesend', function (message) {
+            console.log('Receive message ' + message.msg + ' from user in ');
+
+            io.to(message.sender).emit('chat.private',JSON.stringify(message));
+            io.to(message.receiver).emit('chat.private',JSON.stringify(message))
+            /*io.sockets.emit('chat.private', JSON.stringify(message));*/
+        });
+
 
         socket.on('disconnect', function() {
             if( ! socket.nickname) return;

@@ -88,7 +88,7 @@
             var $chatUsers = $('ul.chatUsers');
 
             // open a socket connection
-            var socket = new io.connect('http://chat.dev:8080', {
+            var socket = new io.connect('http://localhost:8080', {
                 'reconnection': true,
                 'reconnectionDelay': 1000,
                 'reconnectionDelayMax' : 5000,
@@ -140,7 +140,7 @@
                                 '<strong class="primary-font">' + data.nickname + '</strong>' +
                                 '<small class="pull-right text-muted">' +
                                 '<span class="glyphicon glyphicon-time"></span>' +
-                                '12 mins ago' +
+                                'just now' +
                                 '</small>' +
                             '</div>' +
                             '<p>' + data.msg + '</p>' +

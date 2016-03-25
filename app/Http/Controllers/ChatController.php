@@ -27,5 +27,8 @@ class ChatController extends Controller {
             'system'   => true,
         ]));
 	}
+public function sendprivatemsg(){
+	return view('privatemsg');
 
+}
 }

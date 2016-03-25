@@ -9,4 +9,5 @@ Route::controllers([
 
 
 Route::get('home', 'ChatController@index');
+Route::get('sendprivatemsg','ChatController@sendprivatemsg');
 Route::get('systemMessage', 'ChatController@systemMessage');
